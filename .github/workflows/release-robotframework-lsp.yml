@@ -60,15 +60,15 @@ jobs:
 
     # Intellij (build)  
     - name: Package
-      working-directory: ./robotframework-intellij
-      run: ./gradlew buildPlugin
-    - uses: actions/upload-artifact@v1
-      with:
-        name: intellij-distribution
-        path: robotframework-intellij/build/distributions/
+#       working-directory: ./robotframework-intellij
+#       run: ./gradlew buildPlugin
+#     - uses: actions/upload-artifact@v1
+#       with:
+#         name: intellij-distribution
+#         path: robotframework-intellij/build/distributions/
 
-    - name: Check tag version
-      run: python -m dev check-tag-version
+#     - name: Check tag version
+#       run: python -m dev check-tag-version
       
 #     - name: Publish intellij plugin
 #       working-directory: ./robotframework-intellij
