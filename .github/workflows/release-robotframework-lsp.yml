@@ -59,7 +59,7 @@ jobs:
         path: ./robotframework-ls/robotframework-lsp.vsix
 
     # Intellij (build)  
-    - name: Package
+#     - name: Package
 #       working-directory: ./robotframework-intellij
 #       run: ./gradlew buildPlugin
 #     - uses: actions/upload-artifact@v1

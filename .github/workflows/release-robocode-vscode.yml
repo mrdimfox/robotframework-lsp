@@ -20,7 +20,7 @@ jobs:
     - name: Setup node
       uses: actions/setup-node@v1
       with:
-        node-version: 12.x
+        node-version: 16.x
     - name: Yarn install
       run: yarn install
     - name: Set up Python 3.7
@@ -46,18 +46,18 @@ jobs:
       with:
         name: robocorp-code.vsix
         path: ./robocorp-code/robocorp-code.vsix
-    - name: Check tag version
-      run: python -m dev check-tag-version
+#     - name: Check tag version
+#       run: python -m dev check-tag-version
 #     - name: Upload to PyPI
 #       working-directory: ./robocorp-code/src
 #       run: twine upload dist/*
 #       env:
 #         TWINE_USERNAME: ${{ secrets.TWINE_USERNAME }}
 #         TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
-    - name: Publish to vscode marketplace 
-      run: vsce publish -p $VSCE_TOKEN
-      env:
-        VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
+#     - name: Publish to vscode marketplace 
+#       run: vsce publish -p $VSCE_TOKEN
+#       env:
+#         VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
     - name: Publish to open vsx marketplace 
       run: npx ovsx publish robocorp-code.vsix -p $OPEN_VSX_TOKEN
       env:
