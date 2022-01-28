@@ -353,8 +353,6 @@ async function getDefaultLanguageServerPythonExecutable(): Promise<ExecutableAnd
                 }
             }
         } else {
-            OUTPUT_CHANNEL.appendLine("Language server Python executable. Searching " + executable + " from the PATH.");
-            executable = findExecutableInPath(executable);
             OUTPUT_CHANNEL.appendLine("Language server Python executable. Found: " + executable);
         }
         if (!fs.existsSync(executable)) {
